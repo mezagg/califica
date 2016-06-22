@@ -1,5 +1,5 @@
 # califica
-
+<pre>
 La aplicacion utiliza:
 -grails version 3.1.6
 -jdk 1.8
@@ -15,3 +15,4 @@ post con objeto de tipo JSON
 Listados JSON
 http://localhost:8080/alumno/listar
 http://localhost:8080/calificaciones/listar?materia=M1
+</pre>
