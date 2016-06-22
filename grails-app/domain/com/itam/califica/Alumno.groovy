@@ -7,9 +7,10 @@ class Alumno {
     String apellidoPaterno
     String apellidoMaterno
     String matricula
+    static hasMany = [calificaciones: Calificaciones]
     
-    public Alumno(Integer id, String nombre, String ap, String am, String m){
-        this.id = id;
+    public Alumno(String nombre, String ap, String am, String m){
+        
         this.nombre = nombre;
         this.apellidoPaterno = ap;
         this.apellidoMaterno = am;

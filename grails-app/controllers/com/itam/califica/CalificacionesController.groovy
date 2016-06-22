@@ -9,8 +9,8 @@ class CalificacionesController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def listar(){
-        render Calificaciones.list() as JSON
+    def listar(String grupo, String materia){
+        render Calificaciones.findAllByMateria(materia) as JSON
     }
     
     def index(Integer max) {

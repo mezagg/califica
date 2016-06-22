@@ -15,6 +15,11 @@ class AlumnoController {
         render Alumno.list() as JSON
     }
     
+    
+    def grafica(){
+        
+    }
+    
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Alumno.list(params), model:[alumnoCount: Alumno.count()]
