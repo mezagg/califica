@@ -2,12 +2,17 @@ package com.itam.califica
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import grails.converters.JSON
 
 @Transactional(readOnly = true)
 class CalificacionesController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def listar(){
+        render Calificaciones.list() as JSON
+    }
+    
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Calificaciones.list(params), model:[calificacionesCount: Calificaciones.count()]
